@@ -1,0 +1,62 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": [
+            "Maker Camp Workroom"
+        ]
+    },
+    "header": {
+        "name": "Bedrock Demo",
+        "description": "Questa è la demo di un addon",
+        "min_engine_version": [
+            1,
+            21,
+            0
+        ],
+        "uuid": "b14521bb-a42f-4dee-b293-03bac73e4d04",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "capabilities": [
+        "script_eval"
+    ],
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "f1e93050-9053-4b81-98a2-511a6303ad0b",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "uuid": "c0a81de6-d0ff-4416-a823-7ddea7aa1e90",
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "e9fb9f01-add8-4c90-958f-b7346db549bf",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.11.0"
+        }
+    ]
+}

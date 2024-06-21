@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.1.json",
+	"author": "Maker Camp Workroom",
+	"name": "Bedrock Demo",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"filterDefinitions": {
+			"exporter": {
+				"url": "github.com/Fabrimat/regolith-filters",
+				"version": "bdb9df04f530ef3cd6bd838ea74118eb15f2d9f1"
+			},
+			"lang_magic": {
+				"url": "github.com/Fabrimat/regolith-filters",
+				"version": "c5d54587b834e7ca13ec0f0bdc71f403870fae3e"
+			},
+			"deleter": {
+				"url": "github.com/Fabrimat/regolith-filters",
+				"version": "a3fb4bdf23f9114a009099d96881c34a92984bcc"
+			}
+		},
+		"profiles": {
+			"default": {
+				"export": {
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": []
+			},
+			"test": {
+				"export": {
+					"readOnly": false,
+					"target": "local"
+				},
+				"filters": []
+			},
+			"export": {
+				"export": {
+					"readOnly": false,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"filter": "lang_magic"
+					},
+					{
+						"filter": "exporter",
+						"settings": {
+							"exclude": [],
+							"name": "Bedrock Demo v1.0.0",
+							"target": "addon"
+						}
+					}
+				]
+			}
+		}
+	}
+}
